@@ -14,6 +14,14 @@ def encode(password):
         integer_num += 3
         encoded_password += str(integer_num)
     return encoded_password
+
+def decoded(password):
+    decoded_password = ''
+    for i in password:
+        integer_num = int(i)
+        integer_num -= 3
+        decoded_password += str(integer_num)
+    return decoded_password
 if __name__ == '__main__':
     password = None
     continue_calc = True
@@ -24,8 +32,11 @@ if __name__ == '__main__':
             password = str(input('Please enter your password to encode: '))
             password = encode(password)
             print("Your password has been encoded and stored!")
+            print('')
         if option == 2:
-            pass
+            decoded_password = decoded(password)
+            print(f'The encoded password is {password}, and the original password is {decoded_password}')
+            print('')
         if option == 3:
             continue_calc = False
 
