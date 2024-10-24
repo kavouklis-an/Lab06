@@ -21,9 +21,8 @@ if __name__ == '__main__':
         option = int(input('Please enter an option: '))
         if option == 1:
             password = str(input('Please enter your password to encode: '))
-            print("Your password has been encoded and stored!")
             password = encode(password)
-            print(password)
+            print("Your password has been encoded and stored!")
         if option == 2:
             pass
         if option == 3:
